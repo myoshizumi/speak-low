@@ -13,6 +13,7 @@
                         {{ $tweet->user->name }}
                     </span>
                     <p class="text-gray-600">{!! nl2br(e($tweet->content)) !!}</p>
+                    <x-tweet.images :images="$tweet->images" />
                 </div>
                 <div>
                     <x-tweet.options :tweetId="$tweet->id" :userId="$tweet->user_id">
